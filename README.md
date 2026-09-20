@@ -1,20 +1,21 @@
 # upgraded-octo-system
 
-> Prosty projekt startowy z opisem instalacji i uruchomienia.
+Prosty projekt startowy z gotową dokumentacją instalacji i uruchomienia.
 
 ## Opis projektu
 
-`upgraded-octo-system` to przykład repozytorium z podstawową dokumentacją, która pomaga szybko uruchomić projekt na lokalnym komputerze.
+`upgraded-octo-system` to przykładowe repozytorium zawierające podstawową strukturę projektu oraz instrukcje, które pomagają szybko uruchomić aplikację na lokalnym komputerze. Projekt może służyć jako punkt startowy dla aplikacji Node.js, Python lub małych projektów webowych.
 
 ## Wymagania
 
-Zależnie od technologii projektu, mogą być potrzebne:
+W zależności od technologii projektu mogą być potrzebne:
 
 - Git
-- Node.js 18+ lub nowszy
+- Node.js 18 lub nowszy
 - npm
-- Python 3.10+
-- wirtualne środowisko Python (opcjonalnie)
+- Python 3.10 lub nowszy
+- Wirtualne środowisko Python (opcjonalnie)
+- Edytor kodu, np. Visual Studio Code
 
 ## Instalacja
 
@@ -27,19 +28,19 @@ cd upgraded-octo-system
 
 ### 2. Zainstaluj zależności
 
-Jeśli projekt jest oparty na Node.js:
+Dla projektu Node.js:
 
 ```bash
 npm install
 ```
 
-Jeśli projekt jest oparty na Python:
+Dla projektu Python:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Linux / macOS
-# albo:
-# .venv\Scripts\activate  # Windows
+# Windows:
+# .venv\\Scripts\\activate
 pip install -r requirements.txt
 ```
 
@@ -51,7 +52,7 @@ pip install -r requirements.txt
 npm run dev
 ```
 
-Jeśli w projekcie używana jest komenda start:
+Jeżeli projekt korzysta ze skryptu `start`:
 
 ```bash
 npm start
@@ -59,21 +60,33 @@ npm start
 
 ### Python
 
+Dla prostej aplikacji:
+
 ```bash
 python app.py
 ```
 
-Jeśli projekt używa frameworka webowego, np. Flask/FastAPI:
+Dla aplikacji Flask:
 
 ```bash
 flask run
 ```
 
-lub
+Dla aplikacji FastAPI:
 
 ```bash
 uvicorn app:app --reload
 ```
+
+## Konfiguracja środowiska
+
+Jeżeli w repozytorium znajduje się plik `.env.example`, skopiuj go do `.env` i uzupełnij wymagane wartości:
+
+```bash
+cp .env.example .env
+```
+
+Nie przechowuj poufnych danych, takich jak hasła i tokeny, bezpośrednio w repozytorium.
 
 ## Struktura projektu
 
@@ -83,18 +96,13 @@ upgraded-octo-system/
 ├── package.json          # dla projektu Node.js
 ├── requirements.txt      # dla projektu Python
 ├── src/                  # kod źródłowy
-├── app.py                # główny plik aplikacji (jeśli dotyczy)
+├── tests/                # testy, jeśli występują
+├── app.py                # główny plik aplikacji, jeśli dotyczy
 ├── .gitignore
 └── .env.example
 ```
 
-## Dodatkowe informacje
-
-- Zmodyfikuj pliki konfiguracyjne zgodnie z potrzebami projektu.
-- Ustaw zmienne środowiskowe w pliku `.env` na podstawie `.env.example`.
-- Przed oddaniem zmian wykonaj testy i sprawdź poprawność aplikacji.
-
-## Przydatne komendy
+## Przydatne komendy Git
 
 ```bash
 git status
@@ -103,6 +111,10 @@ git commit -m "Dodanie projektu"
 git push origin main
 ```
 
+## Testy
+
+Przed wysłaniem zmian uruchom testy właściwe dla użytej technologii i sprawdź, czy aplikacja działa poprawnie lokalnie.
+
 ## Licencja
 
-Na ten moment projekt nie ma określonej licencji. Możesz dodać plik `LICENSE` oraz ustalić wybraną licencję, np. MIT.
+Na ten moment projekt nie ma określonej licencji. W razie potrzeby dodaj plik `LICENSE` i wybierz licencję, np. MIT.
