@@ -1,4 +1,4 @@
-I# upgraded-octo-system
+# upgraded-octo-system
 
 Prosty projekt startowy z opisem instalacji i uruchomienia.
 
