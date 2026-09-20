@@ -1,6 +1,6 @@
 # upgraded-octo-system
 
-Prosty projekt startowy z opisem instalacji i uruchomienia.
+> Prosty projekt startowy z opisem instalacji i uruchomienia.
 
 ## Opis projektu
 
