@@ -1,10 +1,10 @@
-'# upgraded-octo-system
+# upgraded-octo-system
 
 Prosty projekt startowy z gotową dokumentacją instalacji i uruchomienia.
 
 ## Opis projektu
 
-`upgraded-octo-system` to przykładowe repozytorium zawierające podstawową strukturę projektu oraz instrukcje, które pomagają szybko uruchomić aplikację na lokalnym komputerze. Projekt może służyć jako punkt startowy dla aplikacji Node.js, Python lub małych projektów webowych.
+`upgraded-octo-system` to przykładowe repozytorium zawierające podstawową strukturę projektu oraz instrukcje, które pomagają szybko uruchomić aplikację na lokalnym komputerze. Repozytorium może służyć jako punkt startowy do tworzenia nowych projektów w języku JavaScript, Python lub innych technologiach.
 
 ## Wymagania
 
@@ -14,8 +14,8 @@ W zależności od technologii projektu mogą być potrzebne:
 - Node.js 18 lub nowszy
 - npm
 - Python 3.10 lub nowszy
-- Wirtualne środowisko Python (opcjonalnie)
-- Edytor kodu, np. Visual Studio Code
+- wirtualne środowisko Python (opcjonalnie)
+- edytor kodu, np. Visual Studio Code
 
 ## Instalacja
 
@@ -40,7 +40,7 @@ Dla projektu Python:
 python -m venv .venv
 source .venv/bin/activate  # Linux / macOS
 # Windows:
-# .venv\\Scripts\\activate
+# .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 npm run dev
 ```
 
-Jeżeli projekt korzysta ze skryptu `start`:
+Jeśli projekt korzysta ze skryptu `start`:
 
 ```bash
 npm start
@@ -95,11 +95,12 @@ upgraded-octo-system/
 ├── README.md
 ├── package.json          # dla projektu Node.js
 ├── requirements.txt      # dla projektu Python
-├── src/                  # kod źródłowy
+├── src/                  # katalog z kodem źródłowym
 ├── tests/                # testy, jeśli występują
 ├── app.py                # główny plik aplikacji, jeśli dotyczy
 ├── .gitignore
-└── .env.example
+├── .env.example
+└── LICENSE               # opcjonalnie, jeśli dodasz licencję
 ```
 
 ## Przydatne komendy Git
@@ -118,3 +119,10 @@ Przed wysłaniem zmian uruchom testy właściwe dla użytej technologii i sprawd
 ## Licencja
 
 Na ten moment projekt nie ma określonej licencji. W razie potrzeby dodaj plik `LICENSE` i wybierz licencję, np. MIT.
+
+## Dodatkowe wskazówki
+
+- regularnie aktualizuj zależności;
+- zapisuj środowiskowe zmienne w `.env`, a nie w kodzie;
+- używaj czytelnych commitów i opisów PR;
+- jeśli repo ma duży rozmiar, rozważ dodanie `.gitignore` dla wygenerowanych plików i artefaktów.
